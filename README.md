@@ -1,6 +1,7 @@
-# Get-And-Set-Input-Field-Value-Angular.js #
+# Get-And-Set-Input-Field-Value-Angular.js
 
 # App.html
+
 <h1>Get and set Input field Value</h1>
 
 <h1>User Name is :{{ displayName}}</h1>
@@ -25,60 +26,56 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from "@angular/router";
 
 @Component({
-  selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
-}) 
-
+selector: 'app-root',
+imports: [RouterOutlet],
+templateUrl: './app.html',
+styleUrl: './app.css'
+})
 
 export class App {
-  name="";
-  displayName="";
-  email="";
-  getName(event:Event){
-   this.name=(event.target as HTMLInputElement).value
-    
-  }
-  showName(){
-    this.displayName=this.name;
-  }
+name="";
+displayName="";
+email="";
+getName(event:Event){
+this.name=(event.target as HTMLInputElement).value
+
+}
+showName(){
+this.displayName=this.name;
+}
 setName(){
-  this.name="priya"
+this.name="priya"
 }
 getEmail(val:string){
-  console.log(val);
-  this.email=val
+console.log(val);
+this.email=val
 }
 
 setEmail(){
-  this.email= "default@TestBed.com"
+this.email= "default@TestBed.com"
 }
 
-
-
-# Counter App Code #
+# Counter App Code
 
 # app.ts
 
 # different fun use
 
- count=0
+count=0
 
-  handleIncrement(){
-    this.count=this.count+1;
-  }
+handleIncrement(){
+this.count=this.count+1;
+}
 
-  handleDecrement(){
-  this.count=this.count-1;;
-  }
+handleDecrement(){
+this.count=this.count-1;;
+}
 
-  handleReset(){
-    this.count=0;
-    }
+handleReset(){
+this.count=0;
+}
 
- # One function use
-
+# One function use
 
     handleCounter(val:string){
       if(val=='minus'){
@@ -89,8 +86,7 @@ setEmail(){
         this.count=0
       }
 
-  
-  # App.html
+# App.html
 
    <h1>Counter App</h1>
    <div style="text-align: center;">
@@ -102,14 +98,15 @@ setEmail(){
     </div>
 </div>
 
+# Event Binding Code
 
-# Event Binding Code #
 # app.ts
+
 handleEvent(event:Event){
 console.log("function called",event.type);
- console.log("value",(event.target as HTMLInputElement).value);
-  }
-  
+console.log("value",(event.target as HTMLInputElement).value);
+}
+
 # app.html
 
 <h1>Event in Angular</h1>
@@ -135,7 +132,4 @@ console.log("function called",event.type);
 (focus)="handleEvent($event)"
 (blur)="handleEvent($event)"
 (input)="handleEvent($event)"
-name="user"> 
-
-
-
+name="user">

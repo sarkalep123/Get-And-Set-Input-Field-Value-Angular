@@ -1,0 +1,25 @@
+# app.ts
+
+handleEvent(event:Event){
+console.log("function called",event.type);
+console.log("value",(event.target as HTMLInputElement).value);
+}
+
+# app.html
+
+<h1>Event in Angular</h1>
+<br>
+<button class="btn" name="login" (click)="handleEvent($event)">Event Click!</button>
+
+<br>
+<br>
+<br>
+<div (mouseenter)="handleEvent($event)" style="background-color: green; height:100px;width:100px;">
+</div>
+
+<div (mouseleave)="handleEvent($event)" style="background-color: red; height:100px;width:100px;">
+</div>
+
+<br>
+<br>
+<input type="text" (focus)="handleEvent($event)" (blur)="handleEvent($event)" (input)="handleEvent($event)" name="user">
